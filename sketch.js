@@ -3,7 +3,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-var ground,tree,mango1,mango2,mango3,mango4;
+var ground,tree,mango1,mango2,mango3,mango4,boy;
 
 function preload()
 {
@@ -28,6 +28,7 @@ function setup() {
      mango6 = new Mango(670,340);
      mango7 = new Mango(670,420);
      mango8 = new Mango(600,460);
+     boy = new Boy(200,640);
 
 
 
@@ -50,6 +51,7 @@ function draw() {
   mango6.display();
   mango7.display();
   mango8.display();
+  boy.display();
   
   drawSprites();
  
