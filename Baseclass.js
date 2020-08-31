@@ -1,7 +1,9 @@
 class Baseclass {
     constructor (x,y,radius){
         var options = {
-            isStatic:true
+            isStatic:true,
+            restitution:0,
+            friction:1,
         }
         this.image = loadImage("sprites/stone.png");
        this.body = Bodies.circle(x,y,radius,options);
