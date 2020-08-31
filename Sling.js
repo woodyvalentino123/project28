@@ -13,18 +13,11 @@ class Sling{
         fly(){
             this.chain.bodyA = null;   
            }   
-           attach(){
+           attach(body){
                this.chain.bodyA=body
            }
            
-           detectCollision (lstone,lmango){
-               mangoBodyPositon=lmango.body.position
-               stoneBodyPostion=lstone.body.positon
-               var distance = dist(stoneBodyPosition.x,stoneBodyPosition.y,mangoBodyPosition.x,mangoBodyPosition.y)
-               if(distance<=lmango.r+lstone.r){
-                   Matter.Body.setStatic(lmango.body,false)
-               }
-           }
+          
 
            
            
