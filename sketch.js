@@ -80,13 +80,13 @@ function mouseDragged(){
 }
 
 function mouseReleased(){
- chain.fly();
+  chain.fly();
 
 }
-function keyPressed(){
+function keypressed(){
   if(keyCode===32){
     Matter.Body.setPosition(stone.body,{x:175,y:600})
-    chain.attach(stone.body)
+    sling.attach(stone.body)
     
   }
 
@@ -95,7 +95,9 @@ function detectCollision (lstone,lmango){
   mangoBodyPosition=lmango.body.position
   stoneBodyPosition=lstone.body.position
   var distance = dist(stoneBodyPosition.x,stoneBodyPosition.y,mangoBodyPosition.x,mangoBodyPosition.y)
-  if(distance<=lmango.r+lstone.r){
+  if(distance<=lmango.radius+lstone.radius){
       Matter.Body.setStatic(lmango.body,false)
   }
 }
+
+

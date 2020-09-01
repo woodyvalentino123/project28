@@ -13,12 +13,11 @@ class Sling{
         fly(){
             this.chain.bodyA = null;   
            }   
-           attach(body){
+           attach(){
                this.chain.bodyA=body
            }
            
-          
-
+           
            
            
         display(){
